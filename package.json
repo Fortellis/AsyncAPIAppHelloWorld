@@ -4,7 +4,8 @@
   "description": "This is the test for the webhook to work with the local Async API.",
   "main": "index.js",
   "scripts": {
-    "test": "Testing 1, 2, 3"
+    "test": "Testing 1, 2, 3",
+    "start": "node index.js"
   },
   "keywords": [
     "Webhook",
