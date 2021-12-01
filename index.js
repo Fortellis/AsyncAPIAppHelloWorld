@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 
 const fs = require('fs');
 
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.json({ extended: true }), express.json());
 
 app.post('/hello/world', function (req, res) {
@@ -36,5 +38,5 @@ app.get('/hello/world', function(req, res){
   });
 })
 
-app.listen(3001, '127.0.0.1');
-console.log('Node server running on port 3001');
+app.listen(PORT);
+console.log('Node server running on port ' + PORT);
