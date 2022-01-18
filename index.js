@@ -19,7 +19,7 @@ const jwtVerifier = new JwtVerifier({
 
 app.use(bodyParser.json({ extended: true }), express.json());
 
-app.post('/hello/world', [verifyToken], function (req, res) {
+app.post('/hello/world/event', [verifyToken], function (req, res) {
   jwtVerifier.verifyAccessToken(req.token, "api_providers").then(jwt => {
     console.log(jwt.claims.sub);
     console.log(req.body);
